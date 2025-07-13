@@ -1,6 +1,4 @@
 name = "virtusim-proxy"
-type = "javascript"
-
-account_id = ""
-workers_dev = true
+main = "index.js"
 compatibility_date = "2023-07-01"
+workers_dev = true
