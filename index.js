@@ -5,12 +5,14 @@ export default {
     const action = url.searchParams.get("action");
     const country = url.searchParams.get("country");
     const service = url.searchParams.get("service");
+    const operator = url.searchParams.get("operator"); // ✅ tambahkan ini
 
     const proxyUrl = new URL("https://virtusim.com/api/v2/json.php");
     proxyUrl.searchParams.set("api_key", apiKey);
     proxyUrl.searchParams.set("action", action);
     if (country) proxyUrl.searchParams.set("country", country);
     if (service) proxyUrl.searchParams.set("service", service);
+    if (operator) proxyUrl.searchParams.set("operator", operator); // ✅ dan ini
 
     const response = await fetch(proxyUrl.toString(), {
       method: "GET",
